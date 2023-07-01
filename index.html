@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed | LinkedIn</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/stylesheets/main.css">
+   <!-- fav-icon -->
+    <link rel="icon"  href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    <!-- Font Awesome javascript  -->
+    <script src="https://kit.fontawesome.com/93464eff6a.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="container">
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="row justify-space-between align-items-center">
+                    <div class="col-1">
+                        <div class="row">
+                            <div class="logo">
+                                <a href="#">
+                                    <img class="w-100" src="data:image/png;base64,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" alt="logo">
+                                </a>
+                            </div>
+                            <div class="search">
+                                <form action="#">
+                                    <input class="w-100" type="text" placeholder="Search">
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="row align-items-center">
+                            <nav id="main-nav">
+                                <input type="checkbox" value="toggle-menu">
+                                <button class="menu-btn">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </button>
+                                    <ul>
+                                        <li><a class="search-tab" href="#"><i class="fa-solid fa-search"></i><span>Search</span></a></li>
+                                        <li><a class="active" href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+                                        <li><a href="#"><i class="fa-solid fa-user-group"></i><span>My Network</span></a></li>
+                                        <li><a href="#"><i class="fa-solid fa-briefcase"></i><span>Jobs</span></a></li>
+                                        <li><a href="#"><i class="fa-solid fa-comment-dots"></i><span>Messaging</span></a></li>
+                                        <li><a href="#"><i class="fa-solid fa-bell"></i><span>Notification</span></a></li>
+                                        <li><a href="#"><img  src="assets/images/WhatsApp Image 2023-05-31 at 7.49.00 PM.jpeg" alt="profilephoto"><span>Me <i class="fa-solid fa-caret-down"></i></span></a></li>
+                                    </ul>
+                                </nav>
+                                
+                                <div class="work">
+                                    <ul class="align-items-center">
+                                        <li><a href="#"><i class="fa-solid fa-grip"></i><span>Work <i class="fa-solid fa-caret-down"></i></span></i></a></li>
+                                        <li><a href="#">Try Premium for free</a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content -->
+        <div id="content">
+            <div class="container">
+                <div class="row justify-space-between">
+                    <aside id="sidebar_1">
+                        
+                            <div class="widget">
+                                <div class="profile">
+                                    <div class="image-top"></div>
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="assets/images/WhatsApp Image 2023-05-31 at 7.49.00 PM.jpeg" alt="profile_photo" height="70px" width="50px">
+                                        </div>
+                                        <h4>Yogesh Panchal</h4>
+                                        
+                                    </a>
+                                    <p>Student at Dr. A.P.J. Abdul Kalam Technical University</p>
+                                    
+                                </div>
+                                <div class="connections">
+                                    <a href="#">
+                                        <div class="row justify-space-between">
+                                            <div class="connection-text">
+                                                <p>Connections</p>
+                                                <p class="black-color">Grow your network</p>
+                                            </div>
+                                            <div class="connection-num">
+                                                <i class="fa-solid fa-user-plus"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="try_premium">
+                                    <a href="#">
+                                        <span>Access exclusive tools & insights</span>
+                                        <span class="black-color"><i class="fa-solid fa-square"></i>Try Premium for free</span>
+                                    </a>
+                                </div>
+                                <div class="my-items">
+                                    <a href="#">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                        <span class="black-color">My items</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="widget widget-2">
+                                <div class="list">
+                                    <ul>
+                                        <li><a href="#">Groups</a></li>
+                                        <li><a href="#">
+                                            <div class="row justify-space-between">
+                                                <span>Events</span>
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+                                        </a></li>
+                                        <li><a href="#">Followed Hastags</a></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="discover">
+                                    <a href="#">Discover More</a>
+                                </div>
+                            </div>
+                        
+                    </aside>
+                    <!-- main content  -->
+                    <main id="main">
+                        <section id="upload-post">
+                            <div class="row justify-space-evenly">
+                              <div class="img-1">
+                                <a href="#">
+                                    <img src="assets/images/WhatsApp Image 2023-05-31 at 7.49.00 PM.jpeg" alt="img">
+                                </a>
+                              </div>
+                                <div class="upload-btn">
+                                    <button><span class="light-black">Start a post</span></button>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-image blue"></i>
+                                        <span>Photo</span>
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-youtube green"></i>
+                                        <span>Vedio</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-calendar-check yellow"></i>
+                                        <span>Event</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-solid fa-newspaper orange"></i>
+                                        <span>Write article</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                        <div id="sort">
+                            <button class="w-100">
+                                <div class="row align-items-center justify-space-between">
+                                    <div class="border">
+                                        <hr>
+                                    </div>
+                                    <div class="sort-text light-black">
+                                        Sort by: Top <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby1.jpg" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info ">
+                                                    <div class="name">Wouter van Heddeghem</div>
+                                                    <div>1,682 Followers</div>
+                                                    <div>
+                                                        <span>4h</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <div class="row justify-space-between">
+                                <p>12 Divine Mandir Treks that every Devotee must undertake at least once
+
+                                    1. Shri Kedarnath Dham Trek
+                                <a href="#">...See More</a></p>
+                            </div>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/postcontent1.avif" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>8,643</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">75 comments</a>
+                                        <a href="#">45 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby2.jpg" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info">
+                                                    <div class="name">Mr. VIJAY ᑕᕼOᒪᒪᗩᑎGI</div>
+                                                    <div>182 Followers</div>
+                                                    <div>
+                                                        <span>7d</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <p>Some of the useful python string method
+
+                                <a href="#">...See More</a></p>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/content2.jpg" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>843</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">74 comments</a>
+                                        <a href="#">0 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby3.png" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info">
+                                                    <div class="name">Lufthansa Group for Business</div>
+                                                    <div>6,687 Followers</div>
+                                                    <div>
+                                                        <span>6h</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <p>A trend that can increase your business travel sales 
+                                <a href="#">...See More</a></p>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/content2.png" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>688</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">8 comments</a>
+                                        <a href="#">3 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby4.jpg" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info">
+                                                    <div class="name">Nishant Chahar</div>
+                                                    <div>250k Followers</div>
+                                                    <div>
+                                                        <span>1h</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <p>AI & ChatGPT will build websites too ?
+
+                                    As a business owner, building a custom website can be a very hard task
+                                <a href="#">...See More</a></p>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/content4.png" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>688</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">12 comments</a>
+                                        <a href="#">3 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby5.png" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info">
+                                                    <div class="name">UN Women Asia and the Pacific</div>
+                                                    <div>16,022 Followers</div>
+                                                    <div>
+                                                        <span>10h</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <p>Captain Zoya Sapra Aggarwal is a commercial pilot and the commander with Air India,
+                                        TED speaker and an inspiration to young women and girls in India
+                                <a href="#">...See More</a></p>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/content5.jpg" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>1,467</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">70 comments</a>
+                                        <a href="#">2 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="post">
+                            <header class="post-header">
+                                <a href="#">
+                                    <div class="row justify-space-between">
+                                        <div class="post-by">
+                                            <div class="row">
+                                                <div class="user-img">
+                                                    
+                                                        <img class="w-100" src="assets/images/postby6.jpg" alt="logoimg">
+                                                    
+                                                </div>
+                                                <div class="user-info">
+                                                    <div class="name">Colan Infotech Private Limited</div>
+                                                    <div>21,545 Followers</div>
+                                                    <div>
+                                                        <span>11h</span>
+                                                        <span>Edited</span>
+                                                        <span><i class="fa-solid fa-earth-americas"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </header>
+                            <div class="post-desc">
+                                <p>Looking for a staffing solution for your company? Try contract staffing! It offers flexibility, cost savings, and access to skilled talent. Companies can adjus
+                                <a href="#">...See More</a></p>
+                            </div>
+                            <div class="post-content">
+                                <a href="#">
+                                    <img class="w-100" src="assets/images/content6.jpg" alt="content">
+                                </a>
+                            </div>
+                            <div class="post-details">
+                                <div class="row justify-space-between">
+                                    <div class="post-reactions">
+                                        <a href="#">
+                                            <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="">
+                                            <img src="https://static.licdn.com/sc/h/cpho5fghnpme8epox8rdcds22" alt="">
+                                            <img src="https://static.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8" alt="">
+                                            <span>307</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-comments">
+                                        <a href="#">12 comments</a>
+                                        <a href="#">1 repost</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <ul class="row justify-space-between">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            <span>Like</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-comment"></i>
+                                            <span>Comment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-share"></i>
+                                            <span>Share</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                            <span>Send</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </main>
+                    <aside id="sidebar_2">
+                        <div class="news">
+                            <div class="row justify-space-between">
+                                <div class="news-text">
+                                    <h4>LinkedIn News</h4>
+                                </div>
+                                <div class="info">
+                                    <a href="#">
+                                        <i class="fa-solid fa-circle-info black-color"></i>
+                                    </a>
+                                </div>
+                            </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <strong>Does WFH affect career progression?</strong>
+                                                <p>
+                                                    <span>12h ago</span>
+                                                    <span>9,195 reader</span>
+                                                </p>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <strong>Does WFH affect career progression?</strong>
+                                                <p>
+                                                    <span>12h ago</span>
+                                                    <span>9,195 reader</span>
+                                                </p>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <strong>Does WFH affect career progression?</strong>
+                                                <p>
+                                                    <span>12h ago</span>
+                                                    <span>9,195 reader</span>
+                                                </p>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <strong>Does WFH affect career progression?</strong>
+                                                <p>
+                                                    <span>12h ago</span>
+                                                    <span>9,195 reader</span>
+                                                </p>
+                                            </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <strong>Does WFH affect career progression?</strong>
+                                                <p>
+                                                    <span>12h ago</span>
+                                                    <span>9,195 reader</span>
+                                                </p>
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                
+                        </div>
+                        <div class="ad">
+                            <a href="#">
+                                <img class="w-100" src="https://media.licdn.com/media/AAYQAgTPAAgAAQAAAAAAADVuOvKzTF-3RD6j-qFPqhubBQ.png" alt="">
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    
+<!-- Footer -->
+</div>
+
+
+    
+    
+</body>
+</html>
